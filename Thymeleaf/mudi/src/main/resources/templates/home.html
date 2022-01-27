@@ -7,25 +7,27 @@
     <title>home</title>
 </head>
 <body>
-    <div>
-        <div>Nome do produto</div>
-        <div>Valor: <span>200,99</span></div>
-        <div>Data de entrega: <span>10/02/2022</span></div>
+    <div th:each="pedido : ${pedidos}">
 
+    	<div th:text="${pedido.nomeProduto}">Nome do produto</div>
+        
+        <div>Valor: <span th:text="${pedido.valorNegociado}">200,99</span></div>
+ <div>Data de entrega: <span th:text="${pedido.dataDaEntrega}">10/02/2022</span></div>
+               
         <div>Produto</div>
-        <div>url do produto</div>
+        <div><input th:value="${pedido.urlProduto}" value="url do produto" /></div>
 
         <div>Descrição</div>
-
+ 
         <div>
-            <textarea name="texto" id="" cols="30" rows="10">
+            <textarea th:text="${pedido.descricao}" name="texto" id="" cols="30" rows="10">
                 Descrição do pedido
             </textarea>
         </div>
 
         <div>
-            <img src="" alt="" />
-        </div>
+            <img th:src="${pedido.urlImagem}" src="" alt="" />
+        </div> 
     </div>
 </body>
 </html>
