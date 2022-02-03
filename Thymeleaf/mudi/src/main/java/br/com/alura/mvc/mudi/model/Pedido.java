@@ -43,6 +43,14 @@ public class Pedido {
 		this.valorNegociado = valorNegociado;
 	}
 
+	public StatusPedido getStatus() {
+		return status;
+	}
+
+	public void setStatus(StatusPedido status) {
+		this.status = status;
+	}
+
 	public LocalDate getDataDaEntrega() {
 		return dataDaEntrega;
 	}
