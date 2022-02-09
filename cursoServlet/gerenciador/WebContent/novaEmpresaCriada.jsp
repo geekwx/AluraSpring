@@ -1,12 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
-    %>
-<%
-//scriptlet
-String nomeEmpresa =  (String) request.getAttribute("empresa");
-System.out.println(nomeEmpresa);
-%>
-    
+    %>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +8,6 @@ System.out.println(nomeEmpresa);
 <title>Nova Empresa</title>
 </head>
 <body>
-|Empresa <%= nomeEmpresa %> cadastrada com sucesso!|
+|Empresa ${ empresa } cadastrada com sucesso!|
 </body>
 </html>
